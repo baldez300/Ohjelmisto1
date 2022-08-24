@@ -8,7 +8,7 @@ age = age + 1
 wallet_balance = 15.40
 
 fullname = "Kalle Kontio"
- # merkijonejen littäminen
+ # Merkijonejen littäminen.
 user = username + " (" + fullname + ")"
 print("Käyttäjä on: ", user + " on " + str(age) + " vuotta")
 print("Hänellä on loppakossa  ",  wallet_balance, "euro")
