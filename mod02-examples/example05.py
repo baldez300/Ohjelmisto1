@@ -6,13 +6,13 @@
 # Yksi naula on 32 luotia.
 # Yksi luoti on 13,3 grammaa.
 
-loaf = float(input("Anna leiviskät: "))
-nail = float(input("Anna naulat: "))
-bullet = float(input("Anna luodit: "))
-# print("Your body mass index is: ", round(weight / (height * height), 2))
+loaves = float(input("Anna leiviskät: "))
+nails = float(input("Anna naulat: "))
+bullets = float(input("Anna luodit: "))
+
 # Conversin
-grams = 13.3 * (bullet + (32 * (nail + (loaf * 20))))
-if grams >= 999:
+grams = 13.3 * (bullets + (32 * (nails + (loaves * 20))))
+if grams >= 1000:
     rounded_gram = round(grams, -3)
 
     grams = grams - rounded_gram
