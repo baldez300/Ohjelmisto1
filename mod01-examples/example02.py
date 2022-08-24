@@ -9,4 +9,4 @@ print(math.pi)
 r_string = input("Anna ympyrän säde (m): ")
 r = float(r_string)
 area = math.pi * r * r
-print(f"{r} (m) säteisen ympyrän pinta ale on {area:13.3f} neliömetria")
+print(f"{r} (m) säteisen ympyrän pinta-ale on {area:13.3f} neliömetriä")
