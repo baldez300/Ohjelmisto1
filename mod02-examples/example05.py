@@ -10,12 +10,15 @@ loaves = float(input("Anna leiviskät: "))
 nails = float(input("Anna naulat: "))
 bullets = float(input("Anna luodit: "))
 
-# Conversin
-grams = 13.3 * (bullets + (32 * (nails + (loaves * 20))))
-if grams >= 1000:
-    rounded_gram = round(grams, -3)
+# Conversion
 
-    grams = grams - rounded_gram
-    rounded_gram = rounded_gram / 1000
+combined_bullets = 13.3 * bullets
+combined_nails = 32 * nails
+combined_loaves = (loaves * 20) // 2
+
+combined_weight = combined_bullets + combined_nails + combined_loaves
+kilograms = combined_weight // 1000
+grams = f"{(combined_weight / 1000 - kilograms) * 1000:.2f}"
+
 print("Massa nykymittojen mukaan: ", end="")
-print(str(round(rounded_gram)) + " kilogrammaa ja " + str(round(grams, 3)) + " grammaa.")
+print(str(kilograms+combined_loaves) + " kilogrammaa ja " + str(grams) + " grammaa.")
