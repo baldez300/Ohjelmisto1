@@ -3,20 +3,20 @@
 # Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
 
 # take inputs
-num1 = float(input('Enter first number: '))
-num2 = float(input('Enter second number: '))
-num3 = float(input('Enter third number: '))
+num1 = int(input('Enter first number: '))
+num2 = int(input('Enter second number: '))
+num3 = int(input('Enter third number: '))
 
 # calculate sum
-sum0 = num1 + num2 + num3
+sum_of_int = num1 + num2 + num3
 
 # calculate product
 product = num1 * num2 * num3
 
 # calculate average
-avg = (num1 + num2 + num3)/3
+avg = sum_of_int / 3
 
 # display result
-print('The sum of the numbers = %0.2f' % sum0)
-print('The product of the numbers = %0.2f' % product)
+print('The sum of the numbers = %.0f' % sum_of_int)
+print('The product of the numbers = %.0f' % product)
 print('The average of the numbers = %0.2f' % avg)
