@@ -2,7 +2,7 @@
 # Ohjelma, joka kysyy käyttäjän biologisen sukupuolen ja hemoglobiiniarvon (g/l).
 # Ohjelma ilmoittaa, onko hemoglobiiniarvo alhainen, normaali vai korkea.
 
-sukupuoli = input("Anna biologinen sukupuoli: ")
+sukupuoli = input("Anna biologinen sukupuoli kirjoittamalla (nainen / mies): ")
 hemoglobiiniarvo = float(input("Anna hemoglobiiniarvo (g/l): "))
 
 gender1 = "nainen"
