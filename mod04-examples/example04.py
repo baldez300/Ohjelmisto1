@@ -14,7 +14,7 @@ while guess != number:
 
     if guess == number:
         print("Oikein!!")
-        print(attempts, "yritystä")
+        print(attempts, "attempt(s)")
         break
     elif guess < number:
         print("Liian pieni arvaus!")
