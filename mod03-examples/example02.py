@@ -2,7 +2,10 @@
 # Ohjelma, joka kysyy käyttäjältä laivan hyttiluokan (LUX, A, B, C)
 # ja tulostaa sen sanallisen kuvauksen.
 
-hyttiluokka = input("Anna laivan hyttiluokan merkki: ")
+# This line below is for upper and lower case (esim. "lux" .upper -> "LUX")
+# hyttiluokka = hyttiluokka.upper()
+
+hyttiluokka = input("Anna laivan hyttiluokan merkki? (LUX, A, B, C): ")
 if hyttiluokka == "LUX":
     print("LUX on parvekkeellinen hytti yläkannella.")
 elif hyttiluokka == "A":

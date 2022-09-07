@@ -12,12 +12,14 @@ if sukupuoli == gender1 and hemoglobiiniarvo < 117:
     print("Sinun hemoglobiiniarvo on alhainen.")
 elif sukupuoli == gender1 and hemoglobiiniarvo <= 175:
     print("Sinun hemoglobiiniarvo on normaali.")
-elif sukupuoli == gender1 and hemoglobiiniarvo > 175:
+elif sukupuoli == gender1 and hemoglobiiniarvo > 175: # täällä voisikin olla 'else:'
     print("Sinun hemoglobiiniarvo on normaali korkea.")
 
-if sukupuoli == gender2 and hemoglobiiniarvo < 134:
+if sukupuoli == gender2 and hemoglobiiniarvo < 134: # täällä voisikin olla 'elif:'
     print("Sinun hemoglobiiniarvo on alhainen.")
 elif sukupuoli == gender2 and hemoglobiiniarvo <= 195:
     print("Sinun hemoglobiiniarvo on normaali.")
 elif sukupuoli == gender2 and hemoglobiiniarvo > 195:
     print("Sinun hemoglobiiniarvo on normaali korkea.")
+
+# else: print("Virheellinen syötö, yritä uudelleen..!")

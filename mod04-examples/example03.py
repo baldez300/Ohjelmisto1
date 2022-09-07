@@ -2,10 +2,10 @@
 # kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi.
 # Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.
 
-list = []
+"""list = []
 while True:
     num = input("Anna numero: ")
-    if num == " ":
+    if num == "":
         break
     try:
         num = int(num)
@@ -20,4 +20,15 @@ while True:
         continue
     print("Maximum is", maximum)
     print("Minimum is", minimum)
-print("Toiminnot lopetettu.")
+print("Toiminnot lopetettu.")"""
+
+# ====================SAME AS ABOVE =================
+# Sinun kuvassa loituu se toinen ratkaisu voit sen tarkistaa
+luku = []
+while True:
+    num = input("Anna numero: ")
+    if num == "":
+        break
+    elif num:
+        num = luku.append(int(num))
+print(f"{min(luku)} pienin luku, {max(luku)} suurin luku")
