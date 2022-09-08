@@ -29,13 +29,10 @@ N = 5
 # Calling the function
 Nmaxelements(list1, N) """
 #=========
-luvut = []
-
-luku = input("Anna ensimmäinen luku tai lopeta painamalla Enter: ")
-while luku != "":
-    luvut.append(luku)
-    luvut.sort(reverse=True)
-    luku = input("Anna seuraava luku tai lopeta painamalla Enter: ")
-
-for n in luvut:
-    print(f"{n}")
+input_string = input("Enter a list element separated by space ")
+list  = input_string.split()
+print("Calculating sum of element of input list")
+sum = 0
+for num in list:
+    sum += int (num)
+print("Sum = ",sum)
