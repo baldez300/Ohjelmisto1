@@ -7,7 +7,7 @@ def remove_odd(lst):
     even_num = []
     for i in range(len(lst)):
         print(lst[i])
-        if(lst[i] % 2 == 0):
+        if lst[i] % 2 == 0:
             even_num.append(lst[i])
     return even_num
 

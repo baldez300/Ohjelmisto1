@@ -16,6 +16,7 @@ def main(gallons):
             break
     print("Wrong, negative or zero entry.")
 
+
 gallons_amount = float(input("Anna bensiinin määrä Yhdysvaltain nestegallonoina: "))
 main(gallons_amount)
 

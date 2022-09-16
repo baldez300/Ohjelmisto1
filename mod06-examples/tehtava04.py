@@ -4,7 +4,7 @@
 # kutsut funktiota ja tulostat sen palauttaman summan.
 
 def sum_of_nums(numbers):
-    print("Calculating sum of inegers of input list")
+    print("Calculating sum of integers of input list")
     sum_toal = 0
     for num in numbers:
         sum_toal += int(num)
