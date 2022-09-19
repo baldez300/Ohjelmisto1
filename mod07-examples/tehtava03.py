@@ -24,9 +24,10 @@ def add_airport():
 def search_airport():
     # ask for search string (key) & print value from airport dictionary
     # Ohjelma kysyy ICAO-koodin ja tulostaa sitä vastaavan lentoaseman nimen.
-    airports_list = {"EFHK": "Helsinki-Vantaan lentoasema", "EFOU": "Oulun lentoasema", "EFJY": "Jyväskylän lentoasema"}
+    airports_list = {"EFHK": "Helsinki-Vantaan lentoasema", "EFOU": "Oulun lentoasema", "EFJY": "Jyväskylän lentoasema",
+                     "efhk": "Helsinki-Vantaan lentoasema", "efou": "Oulun lentoasema", "efjy": "Jyväskylän lentoasema"}
 
-    icao_code = input("Anna ICAO-koodi: ")
+    icao_code = input("Anna ICAO-koodi kirjaimilla(EFHK, EFOU tai EFJY): ")
     if icao_code in airports_list:
         print(f"ICAO-koodi: {icao_code} on: {airports_list[icao_code]}.")
     else:
