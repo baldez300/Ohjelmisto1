@@ -1,6 +1,7 @@
 
 # Ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina.
 # Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
+from math import floor
 
 # Yksi leiviskä on 20 naulaa.
 # Yksi naula on 32 luotia.
@@ -27,7 +28,7 @@ print("Massa nykymittojen mukaan: ", end="")
 print(f"{int(kilograms)} kilogrammaa ja  {grams:.2f}  grammaa.")
 
 # Toinen tapa tehddä ==================================================
-from math import floor
+
 loaves = float(input("Anna leiviskät: "))
 nails = float(input("Anna naulat: ")) + loaves * 20
 bullets = float(input("Anna luodit: ")) + 32 * nails

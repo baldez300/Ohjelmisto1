@@ -5,7 +5,7 @@
 
 kuukauden_numero = ("tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu")
 järjestysnumero = int(input("Anna kuukauden järjestysnumero (1-12): "))
-kuukausi = kuukauden_numero[järjestysnumero - 1]
+kuukausi = kuukauden_numero[järjestysnumero-1]
 
 if järjestysnumero == 12 or järjestysnumero == 1 or järjestysnumero == 2:
     print("talvi")

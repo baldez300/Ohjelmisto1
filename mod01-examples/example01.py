@@ -8,10 +8,10 @@ age = age + 1
 wallet_balance = 15.40
 
 fullname = "Kalle Kontio"
- # Merkijonejen littäminen.
+# Merkijonejen littäminen.
 user = username + " (" + fullname + ")"
 print("Käyttäjä on: ", user + " on " + str(age) + " vuotta")
-print("Hänellä on loppakossa  ",  wallet_balance, "euro")
+print("Hänellä on loppakossa  ",  wallet_balance, "euro(a)")
 ticket_price = input(username + " osti bussilipun hinta: ")
 wallet_balance = wallet_balance - float(ticket_price)
 print(f"Hänellä on loppakossa    {wallet_balance:.2f}  euro")

@@ -6,8 +6,8 @@
 import random
 
 ind = 0
-number_of_entries = 0 # N
-inside_of_cercle = 0 # n
+number_of_entries = 0  # N
+inside_of_cercle = 0  # n
 # Number of coordinates generated
 number_of_entries = int(input("Montakohan pistettä generoidaan?: "))
 

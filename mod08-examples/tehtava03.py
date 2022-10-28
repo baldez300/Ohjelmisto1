@@ -38,7 +38,8 @@ def get_two_icao_code2(icao_code1, icao_code2):
     if (result1 == None) or (result2 == None):
         print("Ei tuloksia. Yritä uudelleen...")
     else:
-        print("\n")
+        #print("\n")
+        print('....')
         print("Laske kahden maan pisteen välinen etäisyys kahdella tavalla:")
         print("Niiden välinen etäisyys kilometreissä: ", geodesic(result1, result2).km, "km")
         print("Niiden välinen etäisyys kilometreissä: ", great_circle(result1, result2).km, "km")

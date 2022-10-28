@@ -12,6 +12,6 @@ kilograms = grams / 1000
 print(kilograms, " Kilograms")
 
 # Python program to convert kilograms to grams
-kilograms = float(input("Please enter kilograms:"))
+kilograms = float(input("Please enter kilograms: "))
 grams = kilograms * 1000
 print(grams, " Grams")

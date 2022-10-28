@@ -20,6 +20,7 @@ def connect_database():
          )
 connection = connect_database()
 
+
 def get_country(iso_code):
     sql = f"SELECT iso_country, name, wikipedia_link FROM country WHERE iso_country='{iso_code}';"
     cursor = connection.cursor()
@@ -32,6 +33,7 @@ def get_country(iso_code):
         print(f"{result[0]}: {result[1]}, wikipedia: {result[2]}")
     else:
         print("Ei tuloksia.")
+
 
 def get_all_countries():
     sql = "SELECT iso_country, name, wikipedia_link FROM country;"

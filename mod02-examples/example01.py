@@ -4,10 +4,10 @@ name = input("Mikä sinun nimesi on?: ")
 print("Terve, " + name + '!')
 
 # sama asia, toinen tapa
-print(f"Terve, {name} !")
+print(f"Terve, {name}!")
 
 # kolmas tapa
-print("Terve, ", name, '!') # tulee väli kun tulostetaan viimeinen merki.
+print("Terve, ", name, '!')  # tulee väli kun tulostetaan viimeinen merki.
 
 # neljäs tapa
 print("Terve, {}!".format(name))

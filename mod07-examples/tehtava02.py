@@ -13,8 +13,9 @@ nimet.add(nimi)
 while nimi != "":
     nimi = input("Anna toinen nimi tai lopeta painamalla Enter: ")
     nimet.add(nimi)
-
-    print(nimet)
+    if nimi == "":
+        print(nimet)
+        break
 
 for p in nimet:
     print(p)

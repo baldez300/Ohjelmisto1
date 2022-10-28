@@ -21,7 +21,7 @@ def connect_database():
 connection = connect_database()
 
 def get_country(icao_code):
-    sql = f"SELECT ident, name FROM airport WHERE ident='{icao_code}';"
+    sql = f"SELECT name, municipality FROM airport WHERE ident='{icao_code}';"
     cursor = connection.cursor()
     cursor.execute(sql)
     # haetaan vain yksi (=ensimmäinen) tulosrivi

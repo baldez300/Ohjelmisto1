@@ -24,7 +24,8 @@ connection = connect_database()
 
 
 def get_countries_code(iso_code):
-    sql = f"SELECT country.iso_country, country.name, airport.name, type FROM country, airport WHERE country.iso_country='{iso_code}'AND airport.iso_country='{iso_code}';"
+    #sql = f"SELECT country.iso_country, country.name, airport.name, type FROM country, airport WHERE country.iso_country='{iso_code}'AND airport.iso_country='{iso_code}';"
+    sql = f"SELECT type, count(*) as 1km FROM airport WHERE iso_country='{iso_code}' GROUP BY type;"
     cursor = connection.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()  # type of result: list
@@ -33,7 +34,8 @@ def get_countries_code(iso_code):
     if cursor.rowcount > 0:
         for row in result:
             # type of row: tuple
-            print(f"{row[0]}: {row[1]}, airport name: {row[2]}, airport type: {row[3]}")
+            #print(f"{row[0]}: {row[1]}, airport name: {row[2]}, airport type: {row[3]}")
+            print(f"{row[0]}: {row[1]}")
     else:
         print("Ei tuloksia.")
 
