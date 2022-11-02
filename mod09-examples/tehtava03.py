@@ -3,38 +3,36 @@
 # Esimerkki: auto-olion tämänhetkinen kuljettu matka on 2000 km. Nopeus on 60 km/h.
 # Metodikutsu auto.kulje(1.5) kasvattaa kuljetun matkan lukemaan 2090 km.
 
-class Auto:
+class Car:
+    def __init__(self, reg_number, top_speed):
+        self.reg_number = reg_number
+        self.top_speed = top_speed
+        self.speed = 0
+        self.odometer = 0
+        print("Uusi auto luottu")
 
-    def __init__(self, rekisteritunnus, huippunopeus, nopeus=0, kuljetut_matka=2000):
-        self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = huippunopeus
-        self.nopeus = nopeus
-        self.matka = kuljetut_matka
+    def accelerate(self, delta_speed):
+        if self.top_speed >= delta_speed + self.speed > 0:
+            self.speed = self.speed + delta_speed
+        elif delta_speed + self.speed > self.top_speed:
+            self.speed = self.top_speed
+        else:
+            self.speed = 0
 
-    def kiihdytä(self, kmh):
-        self.nopeus += kmh
-        if 0 < self.nopeus <= self.huippunopeus:
-            print(f"Auto kiihtyy: {self.nopeus} km/h ")
-        elif self.nopeus >= self.huippunopeus:
-            print(f"Auto on saavuttanut huippunopeutensa: {self.huippunopeus} km/h")
-        elif kmh == -200:
-            self.nopeus = 0
-            print(f"Olet painanut hätäjarrua: {self.nopeus} km/h")
-        return
+    def drive(self, hours):
+        self.odometer += self.speed * hours
 
-    def kulje(self, numberofhours):
-        if self.nopeus == 60:
-            self.matka += self.nopeus * numberofhours
-            print(f"\nKuljetut matka on: {self.matka} km")
-        return
+    def prin_info(self):
+        print(f"Auton {self.reg_number}, huippunopeus {self.top_speed} km/h, "
+              f"Nopeus {self.speed}, kuljettu matka {self.odometer} km")
 
 
-auto1 = Auto("ABC-123", 142)
-print(f"Uuden auton rekisteritunnus: {auto1.rekisteritunnus} "
-      f"\n Sen huippunopeus: {auto1.huippunopeus} km/h")
+car1 = Car("ABC-123", 230)
+car1.accelerate(30)
+car1.drive(1)
+car1.prin_info()
+car1.accelerate(70)
+car1.drive(0.5)
 
-auto1.kiihdytä(+30)
-auto1.kiihdytä(+20)
-auto1.kiihdytä(+10)
-
-auto1.kulje(1.5)
+car1.accelerate(-200)
+car1.prin_info()

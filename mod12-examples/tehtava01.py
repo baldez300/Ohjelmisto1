@@ -4,20 +4,22 @@
 # Käyttäjälle on näytettävä pelkkä vitsin teksti.
 
 import requests
-import json
-
-url = "https://api.chucknorris.io/jokes/random"
-response = requests.get(url)
-# joke = response.json()["value"]["joke"]
-# print(joke)
 
 
 def chuck():
-    f = r"https://api.chucknorris.io/jokes/random/5"
-    data = requests.get(f)
-    tt = json.loads(data.text)
+    pyynto = "https://api.chucknorris.io/jokes/random"
+    try:
+        vastaus = requests.get(pyynto)
+        if vastaus.status_code == 200:
+            vastaus_json = vastaus.json()
+            print(vastaus_json["value"])
 
-    print(tt["value"]["joke"])
+    except requests.exceptions.RequestException as e:
+        print("Hakua ei voitu suorittaa.")
 
 
 chuck()
+
+
+
+

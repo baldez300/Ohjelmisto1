@@ -9,39 +9,47 @@
 # Kaikkia autoja käsketään liikkumaan yhden tunnin ajan. Tämä tehdään kutsumalla kulje-metodia.
 # Kilpailu jatkuu, kunnes jokin autoista on edennyt vähintään 10000 kilometriä.
 # Lopuksi tulostetaan kunkin auton kaikki ominaisuudet selkeäksi taulukoksi muotoiltuna.
-
-class Auto:
-    edennyt = []
-    while edennyt > 10:
-        edennyt.append()
-    def __init__(self, rekisteritunnus, huippunopeus, nopeus=0, kuljetut_matka=0):
-        self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = huippunopeus
-        self.nopeus = nopeus
-        self.matka = kuljetut_matka
-
-    def kiihdytä(self, kmh):
-        self.nopeus += kmh
-        return
-
-    def kulje(self, numberofhours):
-        edennyt = 10000
-        self.nopeus = 1
-        return
+import random
 
 
-auto1 = Auto("ABC-1")
-print(f"Uuden auton rekisteritunnus: {auto1.rekisteritunnus} \n")
+class Car:
+    def __init__(self, reg_number, top_speed):
+        self.reg_number = reg_number
+        self.top_speed = top_speed
+        self.speed = 0
+        self.odometer = 0
+        # print("Uusi auto luottu")
 
-auto1.kiihdytä(-10)
-auto1.kiihdytä(+15)
-auto1.kulje(1.5)
+    def accelerate(self, delta_speed):
+        if self.top_speed >= delta_speed + self.speed > 0:
+            self.speed = self.speed + delta_speed
+        elif delta_speed + self.speed > self.top_speed:
+            self.speed = self.top_speed
+        else:
+            self.speed = 0
 
-print("\n")
+    def drive(self, hours):
+        self.odometer += self.speed * hours
 
-auto2 = Auto("ABC-2")
-print(f"Uuden auton rekisteritunnus: {auto2.rekisteritunnus} \n")
+    def prin_info(self):
+        print(f"Auton {self.reg_number}, huippunopeus {self.top_speed} km/h, "
+              f"Nopeus {self.speed}, kuljettu matka {self.odometer} km")
 
-auto2.kiihdytä(-10)
-auto2.kiihdytä(+15)
-auto2.kulje(1.5)
+
+cars = []
+
+for i in range(10):
+    new_car = Car(f"ABC-{i + 1}", random.randint(100, 200))
+    # new_car.prin_info()
+    cars.append(new_car)
+race_on = True
+while race_on:
+    for car in cars:
+        car.accelerate(random.randint(-10, 15))
+        car.drive(1)
+        # car.prin_info()
+        if car.odometer >= 10000:
+            race_on = False
+print("__Tulokset__")
+for car in cars:
+    car.prin_info()

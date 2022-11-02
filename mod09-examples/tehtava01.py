@@ -5,14 +5,21 @@
 # jossa luot uuden auton (rekisteritunnus ABC-123, huippunopeus 142 km/h).
 # Tulosta pääohjelmassa sen jälkeen luodun auton kaikki ominaisuudet.
 
-class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus, nopeus=0, kuljetut_matka=0):
-        self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = huippunopeus
-        self.nopeus = nopeus
-        self.matka = kuljetut_matka
+class Car:
+    def __init__(self, reg_number, top_speed):
+        self.reg_number = reg_number
+        self.top_speed = top_speed
+        self.speed = 0
+        self.odometer = 0
+        print("Uusi auto luottu")
+
+    def prin_info(self):
+        print(f"Auton {self.reg_number}, huippunopeus {self.top_speed}, "
+              f"Nopeus {self.speed}, kuljettu matka {self.odometer}")
 
 
-auto1 = Auto("ABC-123", 142)
-print(f"Uuden auton rekisteritunnus: {auto1.rekisteritunnus} "
-      f"\n Sen huippunopeus: {auto1.huippunopeus} km/h")
+car1 = Car("ABC-123", 120)
+car1.prin_info()
+car2 = Car("ABC-69", 150)
+car2.prin_info()
+#car3 = Car()
