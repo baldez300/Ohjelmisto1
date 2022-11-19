@@ -39,7 +39,7 @@ def icao_code(icao):
             return Response(response=response_json, status=200, mimetype="application/json")
 
     except TypeError:
-        response_json = json.dumps({"message": "Invalid parameter: missing?", "status": "404 bad request Balde"})
+        response_json = json.dumps({"message": "Invalid parameter: missing?", "status": "404 bad request"})
         return Response(response=response_json, status=400, mimetype="application/json")
 
     except ValueError:
