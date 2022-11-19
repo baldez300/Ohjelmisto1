@@ -4,6 +4,7 @@
 # Käyttäjälle on näytettävä pelkkä vitsin teksti.
 
 import requests
+from colorama import Fore
 
 
 def chuck():
@@ -13,13 +14,16 @@ def chuck():
         if vastaus.status_code == 200:
             vastaus_json = vastaus.json()
             print(vastaus_json["value"])
+        elif vastaus == 404:
+            print(Fore.RED + "yhteys onnistuu, mutta osoite ei löydy palvelimelta")
+        else:
+            print(f"{Fore.RED} Yhteys onnistuu, mutta joku virhekoodi: {vastaus.status_code}")
 
     except requests.exceptions.RequestException as e:
-        print("Hakua ei voitu suorittaa.")
+        print(Fore.RED + "Hakua ei voitu suorittaa: " + str(e))
 
 
 chuck()
-
 
 
 

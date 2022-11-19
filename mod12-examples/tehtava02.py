@@ -6,9 +6,16 @@
 # miten saat Kelvin-asteet muunnettua Celsius-asteiksi.
 
 import requests
+from colorama import Fore
 
 hakusana = input("Anna hakusana: ")
 
+
+def converter(kelvin):
+    return kelvin - 273.15
+
+
+# '&unites=metric' addind this in the url it will convert degres to Celsius
 pyynto = "https://api.openweathermap.org/data/2.5/weather?q=" + hakusana + "&appid=8db7003ce10ed1c453749b10afb6a750"
 try:
     vastaus = requests.get(pyynto)
@@ -16,10 +23,10 @@ try:
         vastaus_json = vastaus.json()
         temp = vastaus_json["main"]["temp"]
         celsius = temp-273.15
-        print(f"Temperature: {celsius.__round__()}ºC")
+        print(f"Temperature: {round(celsius)}ºC")
 
         weather = vastaus_json["weather"][0]["description"]
         print(f"Description: {weather}")
 
 except requests.exceptions.RequestException as e:
-    print("Hakua ei voitu suorittaa.")
+    print(Fore.RED + "Hakua ei voitu suorittaa.")
