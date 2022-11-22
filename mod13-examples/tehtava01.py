@@ -11,11 +11,12 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/is-prime')
-def is_prime():
-    args = request.args
+@app.route('/is-prime/<number>')
+def is_prime(number):
+    # args = request.args
     try:
-        num = int(args.get("number"))
+        # num = int(args.get("number"))
+        num = int(number)
         prime_num = True
         for i in range(2, num):
             if num % i == 0: prime_num = False
