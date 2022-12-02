@@ -1,3 +1,4 @@
+
 # Kirjoita Auto-luokka, jonka ominaisuuksina ovat rekisteritunnus, huippunopeus,
 # tämänhetkinen nopeus ja kuljettu matka. Kirjoita luokkaan alustaja,
 # joka asettaa ominaisuuksista kaksi ensin mainittua parametreina saatuihin arvoihin.
@@ -13,13 +14,14 @@ class Car:
         self.odometer = 0
         print("Uusi auto luottu")
 
-    def prin_info(self):
+    def print_info(self):
         print(f"Auton {self.reg_number}, huippunopeus {self.top_speed}, "
               f"Nopeus {self.speed}, kuljettu matka {self.odometer}")
 
 
 car1 = Car("ABC-123", 120)
-car1.prin_info()
-car2 = Car("ABC-69", 150)
-car2.prin_info()
-#car3 = Car()
+car1.print_info()
+car2 = Car("DEF-69", 150)
+car2.print_info()
+car3 = Car("GHI", 180)
+car3.print_info()

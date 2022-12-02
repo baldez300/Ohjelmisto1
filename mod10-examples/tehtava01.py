@@ -11,7 +11,7 @@
 # ja sen jälkeen takaisin alimpaan kerrokseen.
 
 class Elevator:
-    def __init__(self, topfloor, bottomfloor = 1):
+    def __init__(self, topfloor, bottomfloor=1):
         self.bottomfloor = bottomfloor
         self.topfloor = topfloor
         self.currentfloorn = bottomfloor
@@ -53,7 +53,7 @@ class House:
             elevator.movetofloor(elevator.bottomfloor)
 
     def rideele(self, eleid, floor):
-            self.listofele[eleid - 1].movetofloor(floor)
+        self.listofele[eleid - 1].movetofloor(floor)
 
 
 house1 = House(25, -5, 150)

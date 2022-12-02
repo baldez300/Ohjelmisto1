@@ -15,7 +15,7 @@ def converter(kelvin):
     return kelvin - 273.15
 
 
-# '&unites=metric' addind this in the url it will convert degres to Celsius
+# '&unites=metric' adding this in the url it will convert degrees to Celsius
 pyynto = "https://api.openweathermap.org/data/2.5/weather?q=" + hakusana + "&appid=8db7003ce10ed1c453749b10afb6a750"
 try:
     vastaus = requests.get(pyynto)

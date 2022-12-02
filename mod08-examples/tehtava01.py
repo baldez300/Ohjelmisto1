@@ -18,9 +18,12 @@ def connect_database():
          password='password',
          autocommit=True
          )
+
+
 connection = connect_database()
 
-def get_country(icao_code):
+
+def get_airport(icao_code):
     sql = f"SELECT name, municipality FROM airport WHERE ident='{icao_code}';"
     cursor = connection.cursor()
     cursor.execute(sql)
@@ -35,4 +38,4 @@ def get_country(icao_code):
 
 
 unser_input = input("Anna ICAO-koodi: ")
-get_country(unser_input)
+get_airport(unser_input)

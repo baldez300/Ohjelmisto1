@@ -5,7 +5,7 @@
 # Vastauksen on oltava muodossa: {"Number":31, "isPrime":true}.
 
 
-from flask import Flask, request, Response
+from flask import Flask, Response
 import json
 
 app = Flask(__name__)

@@ -23,7 +23,7 @@ class Car:
         else:
             self.speed = 0
 
-    def prin_info(self):
+    def print_info(self):
         print(f"Auton {self.reg_number}, huippunopeus {self.top_speed}, "
               f"Nopeus {self.speed}, kuljettu matka {self.odometer}")
 
@@ -33,9 +33,9 @@ car1 = Car("ABC-123", 130)
 car1.accelerate(30)
 car1.accelerate(70)
 car1.accelerate(50)
-car1.prin_info()
+car1.print_info()
 car1.accelerate(-200)
-car1.prin_info()
+car1.print_info()
 
 # car2 = Car("ABC-69", 150)
 # car2.prin_info()

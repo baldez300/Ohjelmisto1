@@ -31,7 +31,7 @@ class Car:
     def drive(self, hours):
         self.odometer += self.speed * hours
 
-    def prin_info(self):
+    def print_info(self):
         print(f"Auton {self.reg_number}, huippunopeus {self.top_speed} km/h, "
               f"Nopeus {self.speed}, kuljettu matka {self.odometer} km")
 
@@ -42,6 +42,7 @@ for i in range(10):
     new_car = Car(f"ABC-{i + 1}", random.randint(100, 200))
     # new_car.prin_info()
     cars.append(new_car)
+
 race_on = True
 while race_on:
     for car in cars:
@@ -52,4 +53,4 @@ while race_on:
             race_on = False
 print("__Tulokset__")
 for car in cars:
-    car.prin_info()
+    car.print_info()

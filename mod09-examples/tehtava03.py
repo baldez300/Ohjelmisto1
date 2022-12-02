@@ -1,3 +1,4 @@
+
 # Laajenna ohjelmaa siten, että mukana on kulje-metodi, joka saa parametrinaan tuntimäärän.
 # Metodi kasvattaa kuljettua matkaa sen verran kuin auto on tasaisella vauhdilla annetussa tuntimäärässä edennyt.
 # Esimerkki: auto-olion tämänhetkinen kuljettu matka on 2000 km. Nopeus on 60 km/h.
@@ -22,7 +23,7 @@ class Car:
     def drive(self, hours):
         self.odometer += self.speed * hours
 
-    def prin_info(self):
+    def print_info(self):
         print(f"Auton {self.reg_number}, huippunopeus {self.top_speed} km/h, "
               f"Nopeus {self.speed}, kuljettu matka {self.odometer} km")
 
@@ -30,9 +31,11 @@ class Car:
 car1 = Car("ABC-123", 230)
 car1.accelerate(30)
 car1.drive(1)
-car1.prin_info()
+car1.print_info()
+
 car1.accelerate(70)
 car1.drive(0.5)
+car1.print_info()
 
 car1.accelerate(-200)
-car1.prin_info()
+car1.print_info()
