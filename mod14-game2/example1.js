@@ -1,3 +1,7 @@
+// Add a flag of country
+const img = document.querySelector('#flag');
+
+
 // await-async
 async function getAirportData(icao) {
   const response = await fetch('http://localhost:5000/airport/' + icao);
