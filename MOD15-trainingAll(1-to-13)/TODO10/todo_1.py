@@ -1,14 +1,13 @@
-
-# Kirjoita Hissi-luokka, joka saa alustajaparametreinaan alimman ja ylimmän kerroksen numeron.
-# Hissillä on metodit siirry_kerrokseen, kerros_ylös ja kerros_alas.
-# Uusi hissi on aina alimmassa kerroksessa.
-# Jos tee luodulle hissille h esimerkiksi metodikutsun h.siirry_kerrokseen(5),
-# metodi kutsuu joko kerros_ylös- tai kerros_alas-metodia niin monta kertaa,
-# että hissi päätyy viidenteen kerrokseen.
-# Viimeksi mainitut metodit ajavat hissiä yhden kerroksen ylös- tai alaspäin ja ilmoittavat,
-# missä kerroksessa hissi sen jälkeen on.
-# Testaa luokkaa siten, että teet pääohjelmassa hissin ja käsket sen siirtymään haluamaasi kerrokseen
-# ja sen jälkeen takaisin alimpaan kerrokseen.
+# Write an Elevator class that receives the lowest and highest floor number as its initializer parameters.
+# The elevator has methods move_to_floor, floor_up and floor_down.
+# The new elevator is always on the lowest floor.
+# If, for example, you make a method call to the created elevator h.go to_floor(5),
+# the method calls either the layer_up or layer_down method as many times as
+# that the elevator ends at the fifth floor.
+# The latter methods drive the elevator up or down one floor and declare,
+# which floor is the elevator after that.
+# Test the class by creating an elevator in the main program and telling it to move to the floor you want
+# and after that back to the bottom layer.
 
 class Elevator:
     def __init__(self, topfloor, bottomfloor=1):
@@ -25,13 +24,13 @@ class Elevator:
         print(f"elevator moved down to {self.currentfloorn}")
 
     def movetofloor(self, floormoveto):
-        if  self.bottomfloor > floormoveto or self.topfloor < floormoveto:
+        if self.bottomfloor > floormoveto or self.topfloor < floormoveto:
             print("no such floor.")
             return
         floorreached = False
         while not floorreached:
             if floormoveto == self.currentfloorn:
-                print("u have reached ur desıred floor")
+                print("u have reached ur desired floor")
                 floorreached = True
             elif floormoveto > self.currentfloorn:
                 print(f"elevator movıng up to {self.currentfloorn + 1}")
